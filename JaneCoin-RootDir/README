@@ -1,3 +1,3 @@
-The root directory has to be changed, as a conf file is planted in it, as block data. 
+The root directory has to be changed, as a conf file is planted in it, as is the database and block data. 
 
 Remove it all, and make a real .conf, then compile or start Jane, with just a normal .conf file at root/roaming.
