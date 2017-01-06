@@ -1,0 +1,173 @@
+Running the daemon without Jane's ready-made directory with weird JaneCoin.conf is interesting. 
+
+Make a /.JaneCoin/ directory, place a JaneCoin.conf in it. 
+
+(e.g.)
+
+daemon=1
+rpcuser=JaneCoinrpc
+rpcpassword=KdvYB4UYx7kiUZiDcLHxiSmu3HEQBFz7J1dc
+rpcallowip=127.0.0.1
+rpcport=13412
+
+Then compile. 
+
+
+Things are a bit different on this chain.
+
+
+http://45.32.150.108/index.php
+http://45.32.150.108/rpcace.php (raw json)
+
+
+Old rpcace picks a few things up.
+
+# Bigger staking pizes
+
+----
+
+- hash	1f96a36d7a8b53a55b11977c30a68af99317e869df7604380c782664d7cecb5e
+confirmations	12
+size	488
+height	7170
+version	6
+merkleroot	5068eb2690df34335046fa3056e758fbf770e167a6390d0649eefba6926133d8
+mint	3578.09917808
+time	1483478042
+nonce	0
+bits	1c249e75
+difficulty	6.99080488
+previousblockhash	76a5c4fc20ef4fcceb71aa967a22397e86c4e265e78761e4fc45328a50ac0429
+nextblockhash	64e01176be88a7ddb249ab350f8267aebe3efa2ee1aab8cff8b034fd8c156422
+proofhash	000112866f02c4eaf0e5120e1ff361a842dbcaaf3410751831a8bc9f25b10f4f
+tx	f2be5ceb55a52da1885cab3c88b52db985cc507cf66c0fa08a5d347babc0b113
+tx	4bb6d8b9952f3d93514fe7ebbfed4662a17705840173f338b34913a22b032796
+     1266711.61 -> JUjqe3BwPfqEojytQck4gwppTTAEmqG8nq
+     1266711.62996104 -> JUjqe3BwPfqEojytQck4gwppTTAEmqG8nq
+
+-----
+
+# Rows of Jane
+
+Block	Hash	                 Difficulty · PoS Time (UTC) Tx# · Value out
+7182	17a7b7865764a0d5 ...	4.82	23:17:20 2017-Jan-03	2 · 500779.57
+7181	fff8f813ab1e30f6 ...	6.03	23:12:14 2017-Jan-03    2 · 500774.88
+7180	61bed1bca7d1923f ...	7.53	22:35:45 2017-Jan-03	2 · 100154.48
+7179	5230a822701422c6 ...	7.62	22:13:43 2017-Jan-03	2 · 500759.59
+7178	24ef0dcc0938a2ee ...	7.78	22:07:10 2017-Jan-03	2 · 500759.78
+7177	2118f5066eed2b93 ...	8.35	22:00:07 2017-Jan-03	2 · 100152.01
+7176	1a4d2d35ed9b7213 ...	7.43	21:50:38 2017-Jan-03	2 · 500754.74
+7175	3e5e7c0cad6b131e ...	7.26	21:49:55 2017-Jan-03	2 · 500751.46
+7174	4922d543bbdac81e ...	6.99	21:45:00 2017-Jan-03	2 · 500751.29
+7173	893a9004d70471cf ...	8.73	21:40:50 2017-Jan-03	2 · 500748.80
+7172	28c1bdf5203bcb5e ...	7.92	21:18:57 2017-Jan-03	2 · 100149.65
+7171	64e01176be88a7dd ...	7.49	21:17:25 2017-Jan-03	2 · 500742.11
+7170	1f96a36d7a8b53a5 ...	6.99	21:14:02 2017-Jan-03	2 · 2533423.24
+7169	76a5c4fc20ef4fcc ...	6.28	21:11:13 2017-Jan-03	2 · 500743.99
+7168	fd9c3ff2d7891d5e ...	6.94	21:10:06 2017-Jan-03	2 · 500741.43
+7167	c8699b2d05e86967 ...	6.52	20:59:04 2017-Jan-03	2 · 500738.36
+7166	3b6024c0e84ea489 ...	6.11	20:55:56 2017-Jan-03	2 · 500737.29
+7165	2fbdcdd7b6347e30 ...	5.61	20:52:59 2017-Jan-03	2 · 500738.37
+7164	9e745bcc37635092 ...	5.11	20:50:54 2017-Jan-03	2 · 500736.03
+7163	63d2fbda8120d375 ...	4.77	20:49:13 2017-Jan-03	2 · 500735.65
+7162	48af85fa0cfdc1fd ...	4.34	20:46:22 2017-Jan-03	2 · 100147.56
+7161	897e408892ee535b ...	4.37	20:44:42 2017-Jan-03	2 · 500732.78
+7160	e491004bcc3dc028 ...	4.89	20:38:21 2017-Jan-03	2 · 500734.43
+7159	8950d2f31583eb9e ...	4.48	20:26:40 2017-Jan-03	2 · 500727.79
+7158	92e19f1ad98f78e7 ...	5.01	20:24:41 2017-Jan-03	2 · 100146.57
+7157	79bb22540dc91457 ...	5.21	20:12:58 2017-Jan-03	2 · 500727.37
+7156	39c6d4360c3c953a ...	6.52	20:05:04 2017-Jan-03	2 · 500723.05
+7155	68ea74c771c10b57 ...	6.43	19:06:07 2017-Jan-03	2 · 500708.19
+7154	87e7d5f04272ce9c ...	7.75	19:00:46 2017-Jan-03	2 · 500703.37
+7153	79caed656b1733ba ...	6.88	18:44:53 2017-Jan-03	2 · 100140.84
+7152	96cb4c0f4d0655b6 ...	7.21	18:44:16 2017-Jan-03	2 · 500701.64
+7151	d61098aeb4db0596 ...	6.76	18:35:59 2017-Jan-03	2 · 500696.04
+
+Later payments look a bit smaller, avaraging 250,000 per block.
+
+Block	Hash	     Difficulty · PoS    Time (UTC)	      Tx# · Value out
+7643	281ebf25febd6a2d ...	0.38	00:04:53 2017-Jan-06	2 · 50161.87  
+7642	89244d7bdf5336f7 ...	0.46	00:02:21 2017-Jan-06	12 · 6970238.95
+7641	8a82231dddf6216a ...	0.41	23:46:19 2017-Jan-05	2 · 250804.61
+7640	7a9bf1c1e0e2f1c8 ...	0.37	23:45:25 2017-Jan-05	5 · 2106039.75
+7639	9d50c5700fea5d3c ...	0.41	23:43:20 2017-Jan-05	2 · 250804.19
+7638	e2065a49477c77ef ...	0.46	23:32:40 2017-Jan-05	2 · 250801.95
+7637	b398c0181f80fff7 ...	0.46	23:20:37 2017-Jan-05	2 · 250801.78
+7636	9ebd523ef01ee9d3 ...	0.48	23:14:47 2017-Jan-05	2 · 250801.18
+7635	ead2e66cbeec796c ...	0.44	23:06:47 2017-Jan-05	2 · 50160.22
+7634	b509787401f26315 ...	0.43	23:04:25 2017-Jan-05	2 · 250798.58
+7633	ed763156b5a8eb48 ...	0.41	23:00:09 2017-Jan-05	2 · 250799.05
+7632	b501d5a208e65b76 ...	0.43	22:55:33 2017-Jan-05	2 · 250796.67
+
+-----
+
+#  Value
+
+Value out in less than 5 hours, or 31 blocks averaging 500,000 each block, plus the 2,533,423 bonus is about 18,000,000 (18 million) if you are on this chain.
+
+
+------
+
+# Mint 94.3939726, payout double transactions like every block, 25080.93 and 25080.9439726 -> JXiHJsi9tbryKKdAzTFgYgGSQuykpuKYZ5
+
+hash	281ebf25febd6a2d68c9a48ed11d2d764e51ac619b8e2186261fac74fc57b2a0
+confirmations	1
+size	453
+height	7643
+version	6
+merkleroot	442195c2b8f2e8c8f15bd3eb8f29c5ae110921466c195485629da212b08cd0b0
+mint	94.3939726   <<<<<<<<<<<<<<
+time	1483661093
+nonce	0
+bits	1d02a7cb
+difficulty	0.3765795
+previousblockhash	89244d7bdf5336f74938b77a6038b11d85f08fad79fdb3961d7ec7cdb6d0384b
+proofhash	000206d70665c4ab04710c985d96c99f32ff5b410933b3f99baa7600cb896cfa
+tx	77287874436e0dde63278b25ba0120b15d696b18d5ac4aef64f776708fe4646b
+tx	e5187f49cc0258503c613fcfbc04c767e6d4cd100d3dd3003d43203ad454b13d
+     25080.93 -> JXiHJsi9tbryKKdAzTFgYgGSQuykpuKYZ5
+     25080.9439726 -> JXiHJsi9tbryKKdAzTFgYgGSQuykpuKYZ5
+
+-----
+
+#  Big
+
+hash	89244d7bdf5336f74938b77a6038b11d85f08fad79fdb3961d7ec7cdb6d0384b
+confirmations	2
+size	7743
+height	7642
+version	6
+merkleroot	d3fd99c6dd9e557c6f7b0d919b25e9e5fab192891a8e1bd65554cecf843be263
+mint	84.7939726
+time	1483660941
+nonce	0
+bits	1d023244
+difficulty	0.45529387
+previousblockhash	8a82231dddf6216a082e6ae92776a413e0c211b9cf9b04189fe62a9277a5afd3
+nextblockhash	281ebf25febd6a2d68c9a48ed11d2d764e51ac619b8e2186261fac74fc57b2a0
+proofhash	0001c3e30fe334998bc088aafeee5ac195d0a22285bd459dd7cb779408ddd04e
+tx	39cbc44990ed9236ad17d25f9035edd1d130b13db59ae1e8b0cd6a0f114cf4a4
+tx	e07120023c4294b1707ccdeb578d402c7790083b52d4291924b20ffefd56603e
+     25081.01 -> Ja8eV6MzGYJktx4aRjT4B3ZFvE7jLbBPF2
+     25081.0139726 -> Ja8eV6MzGYJktx4aRjT4B3ZFvE7jLbBPF2
+tx	6479523721161bad516657c9009233510e7fff89b46f10e7d511b56f588039e8
+     752144.9808219 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	fec224b75e3df58e69f0ca7b8732bc5ccdd5381654e31ce6838f48fbb245e2e4
+     752159.44150681 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	ffffc73c4d3be22e2f225a2068905d3080f71e6b4e6e173ba9a86047a5939be1
+     752166.24999997 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	d94ac369ccf7e677edefc117e33d71856fe04953e3fc09ce59210856c55608d7
+     752172.22506847 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	b5731c35526d32b83e6d49942e3ca04bb6b734928b878ab27cd448ce3ea287ff
+     752190.24739723 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	cf7339c8eec5f43cc3f446bb57925b4a5f9f27a979e2d19540159db21cf478a8
+     551571.73191779 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	c9eb6c53d42815dc85e34075f9bf71ec2a4d803948ec7aaf2af6b5ef895de2ed
+     752213.59753423 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	cbf86479b85004d82264628efc632f5f96798e4353a14164673294b7906aa822
+     752225.69643835 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	3fb3f140793a07fe711b7fb71b57b2c2c368ecef5b5b88627294285f03b86e9f
+     551613.05383558 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+tx	24f8ed12ca1a09c9bdda80329576c66964e7cd6588df3e1ab6060729fa018eaf
+     551619.69821916 -> JTeE6TfvE3vRG6mWQgQFiDo8cGSdayMMGX
+

@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JaneCoin version JANE-v1.0.0.build-g-bdb-gcc (2016-11-29 19:10:56 +0100)
+Using OpenSSL version OpenSSL 1.0.1f 6 Jan 2014
+Startup time: 01/02/17 18:28:30
+Default data directory /root/.JaneCoin
+Used data directory /root/.JaneCoin/testnet2
+dbenv.open LogDir=/root/.JaneCoin/testnet2/database ErrorFile=/root/.JaneCoin/testnet2/db.log
+Final lk_max_locks is 537000, sufficient for (worst case) 11 blocks in a single transaction (up to a 5-deep reorganization)
+Bound to [::]:17778
+Bound to 0.0.0.0:17778
+Loading block index...
+CBlock(hash=00000557385388ce8eeaddf79dadec9c635abd79dc56d86aca0400d819ec9e1b, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=c910f321b99a81dd195eaf2707310aa247a5cf45b5b92844e6374ac21a45e37b, nTime=1480005017, nBits=1f00ffff, nNonce=2179821, vtx=1, vchBlockSig=)
+  Coinbase(hash=c910f321b9, nTime=1480005017, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+    CTxIn(COutPoint(0000000000, 4294967295), coinbase 04ffff001d020f27044a414e45)
+    CTxOut(empty)
+  vMerkleTree: c910f321b9 

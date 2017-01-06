@@ -1,0 +1,1933 @@
+Compiling JaneCoin
+
+Compile-2: The root of the probem with Jane
+
+Mon 02 Jan 2017 10:53:44 PM CET 
+
+root@mongo:~/jane# cd src
+root@mongo:~/jane/src# make -f makefile.unix USE_UPNP=-
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/groestl.d -o obj/groestl.o groestl.c
+groestl.c: In function ‘void groestl_small_close(sph_groestl_small_context*, unsigned int, unsigned int, void*, size_t)’:
+groestl.c:2816:17: warning: variable ‘buf’ set but not used [-Wunused-but-set-variable]
+  unsigned char *buf;
+                 ^
+groestl.c: In function ‘void groestl_big_close(sph_groestl_big_context*, unsigned int, unsigned int, void*, size_t)’:
+groestl.c:2952:17: warning: variable ‘buf’ set but not used [-Wunused-but-set-variable]
+  unsigned char *buf;
+                 ^
+groestl.c: In function ‘void sph_groestl224_init(void*)’:
+groestl.c:3013:28: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_init(cc, 224);
+                            ^
+groestl.c:2738:1: warning:   initializing argument 1 of ‘void groestl_small_init(sph_groestl_small_context*, unsigned int)’ [-fpermissive]
+ groestl_small_init(sph_groestl_small_context *sc, unsigned out_size)
+ ^
+groestl.c: In function ‘void sph_groestl224(void*, const void*, size_t)’:
+groestl.c:3020:34: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_core(cc, data, len);
+                                  ^
+groestl.c:2771:1: warning:   initializing argument 1 of ‘void groestl_small_core(sph_groestl_small_context*, const void*, size_t)’ [-fpermissive]
+ groestl_small_core(sph_groestl_small_context *sc, const void *data, size_t len)
+ ^
+groestl.c: In function ‘void sph_groestl224_close(void*, void*)’:
+groestl.c:3027:39: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_close(cc, 0, 0, dst, 28);
+                                       ^
+groestl.c:2813:1: warning:   initializing argument 1 of ‘void groestl_small_close(sph_groestl_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_small_close(sph_groestl_small_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+groestl.c:3034:40: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_close(cc, ub, n, dst, 28);
+                                        ^
+groestl.c:2813:1: warning:   initializing argument 1 of ‘void groestl_small_close(sph_groestl_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_small_close(sph_groestl_small_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl256_init(void*)’:
+groestl.c:3041:28: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_init(cc, 256);
+                            ^
+groestl.c:2738:1: warning:   initializing argument 1 of ‘void groestl_small_init(sph_groestl_small_context*, unsigned int)’ [-fpermissive]
+ groestl_small_init(sph_groestl_small_context *sc, unsigned out_size)
+ ^
+groestl.c: In function ‘void sph_groestl256(void*, const void*, size_t)’:
+groestl.c:3048:34: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_core(cc, data, len);
+                                  ^
+groestl.c:2771:1: warning:   initializing argument 1 of ‘void groestl_small_core(sph_groestl_small_context*, const void*, size_t)’ [-fpermissive]
+ groestl_small_core(sph_groestl_small_context *sc, const void *data, size_t len)
+ ^
+groestl.c: In function ‘void sph_groestl256_close(void*, void*)’:
+groestl.c:3055:39: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_close(cc, 0, 0, dst, 32);
+                                       ^
+groestl.c:2813:1: warning:   initializing argument 1 of ‘void groestl_small_close(sph_groestl_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_small_close(sph_groestl_small_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+groestl.c:3062:40: warning: invalid conversion from ‘void*’ to ‘sph_groestl_small_context*’ [-fpermissive]
+  groestl_small_close(cc, ub, n, dst, 32);
+                                        ^
+groestl.c:2813:1: warning:   initializing argument 1 of ‘void groestl_small_close(sph_groestl_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_small_close(sph_groestl_small_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl384_init(void*)’:
+groestl.c:3069:26: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_init(cc, 384);
+                          ^
+groestl.c:2874:1: warning:   initializing argument 1 of ‘void groestl_big_init(sph_groestl_big_context*, unsigned int)’ [-fpermissive]
+ groestl_big_init(sph_groestl_big_context *sc, unsigned out_size)
+ ^
+groestl.c: In function ‘void sph_groestl384(void*, const void*, size_t)’:
+groestl.c:3076:32: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_core(cc, data, len);
+                                ^
+groestl.c:2907:1: warning:   initializing argument 1 of ‘void groestl_big_core(sph_groestl_big_context*, const void*, size_t)’ [-fpermissive]
+ groestl_big_core(sph_groestl_big_context *sc, const void *data, size_t len)
+ ^
+groestl.c: In function ‘void sph_groestl384_close(void*, void*)’:
+groestl.c:3083:37: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_close(cc, 0, 0, dst, 48);
+                                     ^
+groestl.c:2949:1: warning:   initializing argument 1 of ‘void groestl_big_close(sph_groestl_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_big_close(sph_groestl_big_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+groestl.c:3090:38: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_close(cc, ub, n, dst, 48);
+                                      ^
+groestl.c:2949:1: warning:   initializing argument 1 of ‘void groestl_big_close(sph_groestl_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_big_close(sph_groestl_big_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl512_init(void*)’:
+groestl.c:3097:26: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_init(cc, 512);
+                          ^
+groestl.c:2874:1: warning:   initializing argument 1 of ‘void groestl_big_init(sph_groestl_big_context*, unsigned int)’ [-fpermissive]
+ groestl_big_init(sph_groestl_big_context *sc, unsigned out_size)
+ ^
+groestl.c: In function ‘void sph_groestl512(void*, const void*, size_t)’:
+groestl.c:3104:32: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_core(cc, data, len);
+                                ^
+groestl.c:2907:1: warning:   initializing argument 1 of ‘void groestl_big_core(sph_groestl_big_context*, const void*, size_t)’ [-fpermissive]
+ groestl_big_core(sph_groestl_big_context *sc, const void *data, size_t len)
+ ^
+groestl.c: In function ‘void sph_groestl512_close(void*, void*)’:
+groestl.c:3111:37: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_close(cc, 0, 0, dst, 64);
+                                     ^
+groestl.c:2949:1: warning:   initializing argument 1 of ‘void groestl_big_close(sph_groestl_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_big_close(sph_groestl_big_context *sc,
+ ^
+groestl.c: In function ‘void sph_groestl512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+groestl.c:3118:38: warning: invalid conversion from ‘void*’ to ‘sph_groestl_big_context*’ [-fpermissive]
+  groestl_big_close(cc, ub, n, dst, 64);
+                                      ^
+groestl.c:2949:1: warning:   initializing argument 1 of ‘void groestl_big_close(sph_groestl_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ groestl_big_close(sph_groestl_big_context *sc,
+ ^
+rm -f obj/groestl.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/blake.d -o obj/blake.o blake.c
+blake.c: In function ‘void blake32_close(sph_blake_small_context*, unsigned int, unsigned int, void*, size_t)’:
+blake.c:886:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+blake.c: In function ‘void blake64_close(sph_blake_big_context*, unsigned int, unsigned int, void*, size_t)’:
+blake.c:991:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+blake.c: In function ‘void sph_blake224_init(void*)’:
+blake.c:1002:41: warning: invalid conversion from ‘void*’ to ‘sph_blake_small_context*’ [-fpermissive]
+  blake32_init(cc, IV224, salt_zero_small);
+                                         ^
+blake.c:791:1: warning:   initializing argument 1 of ‘void blake32_init(sph_blake_small_context*, const sph_u32*, const sph_u32*)’ [-fpermissive]
+ blake32_init(sph_blake_small_context *sc,
+ ^
+blake.c: In function ‘void sph_blake224(void*, const void*, size_t)’:
+blake.c:1009:23: warning: invalid conversion from ‘void*’ to ‘sph_blake_small_context*’ [-fpermissive]
+  blake32(cc, data, len);
+                       ^
+blake.c:801:1: warning:   initializing argument 1 of ‘void blake32(sph_blake_small_context*, const void*, size_t)’ [-fpermissive]
+ blake32(sph_blake_small_context *sc, const void *data, size_t len)
+ ^
+blake.c: In function ‘void sph_blake224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+blake.c:1023:33: warning: invalid conversion from ‘void*’ to ‘sph_blake_small_context*’ [-fpermissive]
+  blake32_close(cc, ub, n, dst, 7);
+                                 ^
+blake.c:839:1: warning:   initializing argument 1 of ‘void blake32_close(sph_blake_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ blake32_close(sph_blake_small_context *sc,
+ ^
+blake.c: In function ‘void sph_blake256_init(void*)’:
+blake.c:1031:41: warning: invalid conversion from ‘void*’ to ‘sph_blake_small_context*’ [-fpermissive]
+  blake32_init(cc, IV256, salt_zero_small);
+                                         ^
+blake.c:791:1: warning:   initializing argument 1 of ‘void blake32_init(sph_blake_small_context*, const sph_u32*, const sph_u32*)’ [-fpermissive]
+ blake32_init(sph_blake_small_context *sc,
+ ^
+blake.c: In function ‘void sph_blake256(void*, const void*, size_t)’:
+blake.c:1038:23: warning: invalid conversion from ‘void*’ to ‘sph_blake_small_context*’ [-fpermissive]
+  blake32(cc, data, len);
+                       ^
+blake.c:801:1: warning:   initializing argument 1 of ‘void blake32(sph_blake_small_context*, const void*, size_t)’ [-fpermissive]
+ blake32(sph_blake_small_context *sc, const void *data, size_t len)
+ ^
+blake.c: In function ‘void sph_blake256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+blake.c:1052:33: warning: invalid conversion from ‘void*’ to ‘sph_blake_small_context*’ [-fpermissive]
+  blake32_close(cc, ub, n, dst, 8);
+                                 ^
+blake.c:839:1: warning:   initializing argument 1 of ‘void blake32_close(sph_blake_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ blake32_close(sph_blake_small_context *sc,
+ ^
+blake.c: In function ‘void sph_blake384_init(void*)’:
+blake.c:1062:39: warning: invalid conversion from ‘void*’ to ‘sph_blake_big_context*’ [-fpermissive]
+  blake64_init(cc, IV384, salt_zero_big);
+                                       ^
+blake.c:896:1: warning:   initializing argument 1 of ‘void blake64_init(sph_blake_big_context*, const sph_u64*, const sph_u64*)’ [-fpermissive]
+ blake64_init(sph_blake_big_context *sc,
+ ^
+blake.c: In function ‘void sph_blake384(void*, const void*, size_t)’:
+blake.c:1069:23: warning: invalid conversion from ‘void*’ to ‘sph_blake_big_context*’ [-fpermissive]
+  blake64(cc, data, len);
+                       ^
+blake.c:906:1: warning:   initializing argument 1 of ‘void blake64(sph_blake_big_context*, const void*, size_t)’ [-fpermissive]
+ blake64(sph_blake_big_context *sc, const void *data, size_t len)
+ ^
+blake.c: In function ‘void sph_blake384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+blake.c:1083:33: warning: invalid conversion from ‘void*’ to ‘sph_blake_big_context*’ [-fpermissive]
+  blake64_close(cc, ub, n, dst, 6);
+                                 ^
+blake.c:944:1: warning:   initializing argument 1 of ‘void blake64_close(sph_blake_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ blake64_close(sph_blake_big_context *sc,
+ ^
+blake.c: In function ‘void sph_blake512_init(void*)’:
+blake.c:1091:39: warning: invalid conversion from ‘void*’ to ‘sph_blake_big_context*’ [-fpermissive]
+  blake64_init(cc, IV512, salt_zero_big);
+                                       ^
+blake.c:896:1: warning:   initializing argument 1 of ‘void blake64_init(sph_blake_big_context*, const sph_u64*, const sph_u64*)’ [-fpermissive]
+ blake64_init(sph_blake_big_context *sc,
+ ^
+blake.c: In function ‘void sph_blake512(void*, const void*, size_t)’:
+blake.c:1098:23: warning: invalid conversion from ‘void*’ to ‘sph_blake_big_context*’ [-fpermissive]
+  blake64(cc, data, len);
+                       ^
+blake.c:906:1: warning:   initializing argument 1 of ‘void blake64(sph_blake_big_context*, const void*, size_t)’ [-fpermissive]
+ blake64(sph_blake_big_context *sc, const void *data, size_t len)
+ ^
+blake.c: In function ‘void sph_blake512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+blake.c:1112:33: warning: invalid conversion from ‘void*’ to ‘sph_blake_big_context*’ [-fpermissive]
+  blake64_close(cc, ub, n, dst, 8);
+                                 ^
+blake.c:944:1: warning:   initializing argument 1 of ‘void blake64_close(sph_blake_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ blake64_close(sph_blake_big_context *sc,
+ ^
+rm -f obj/blake.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/bmw.d -o obj/bmw.o bmw.c
+bmw.c: In function ‘void bmw32_close(sph_bmw_small_context*, unsigned int, unsigned int, void*, size_t)’:
+bmw.c:709:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+bmw.c: In function ‘void bmw64_close(sph_bmw_big_context*, unsigned int, unsigned int, void*, size_t)’:
+bmw.c:836:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+bmw.c: In function ‘void sph_bmw224_init(void*)’:
+bmw.c:847:22: warning: invalid conversion from ‘void*’ to ‘sph_bmw_small_context*’ [-fpermissive]
+  bmw32_init(cc, IV224);
+                      ^
+bmw.c:614:1: warning:   initializing argument 1 of ‘void bmw32_init(sph_bmw_small_context*, const sph_u32*)’ [-fpermissive]
+ bmw32_init(sph_bmw_small_context *sc, const sph_u32 *iv)
+ ^
+bmw.c: In function ‘void sph_bmw224(void*, const void*, size_t)’:
+bmw.c:854:21: warning: invalid conversion from ‘void*’ to ‘sph_bmw_small_context*’ [-fpermissive]
+  bmw32(cc, data, len);
+                     ^
+bmw.c:627:1: warning:   initializing argument 1 of ‘void bmw32(sph_bmw_small_context*, const void*, size_t)’ [-fpermissive]
+ bmw32(sph_bmw_small_context *sc, const void *data, size_t len)
+ ^
+bmw.c: In function ‘void sph_bmw224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+bmw.c:868:31: warning: invalid conversion from ‘void*’ to ‘sph_bmw_small_context*’ [-fpermissive]
+  bmw32_close(cc, ub, n, dst, 7);
+                               ^
+bmw.c:676:1: warning:   initializing argument 1 of ‘void bmw32_close(sph_bmw_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ bmw32_close(sph_bmw_small_context *sc, unsigned ub, unsigned n,
+ ^
+bmw.c: In function ‘void sph_bmw256_init(void*)’:
+bmw.c:876:22: warning: invalid conversion from ‘void*’ to ‘sph_bmw_small_context*’ [-fpermissive]
+  bmw32_init(cc, IV256);
+                      ^
+bmw.c:614:1: warning:   initializing argument 1 of ‘void bmw32_init(sph_bmw_small_context*, const sph_u32*)’ [-fpermissive]
+ bmw32_init(sph_bmw_small_context *sc, const sph_u32 *iv)
+ ^
+bmw.c: In function ‘void sph_bmw256(void*, const void*, size_t)’:
+bmw.c:883:21: warning: invalid conversion from ‘void*’ to ‘sph_bmw_small_context*’ [-fpermissive]
+  bmw32(cc, data, len);
+                     ^
+bmw.c:627:1: warning:   initializing argument 1 of ‘void bmw32(sph_bmw_small_context*, const void*, size_t)’ [-fpermissive]
+ bmw32(sph_bmw_small_context *sc, const void *data, size_t len)
+ ^
+bmw.c: In function ‘void sph_bmw256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+bmw.c:897:31: warning: invalid conversion from ‘void*’ to ‘sph_bmw_small_context*’ [-fpermissive]
+  bmw32_close(cc, ub, n, dst, 8);
+                               ^
+bmw.c:676:1: warning:   initializing argument 1 of ‘void bmw32_close(sph_bmw_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ bmw32_close(sph_bmw_small_context *sc, unsigned ub, unsigned n,
+ ^
+bmw.c: In function ‘void sph_bmw384_init(void*)’:
+bmw.c:907:22: warning: invalid conversion from ‘void*’ to ‘sph_bmw_big_context*’ [-fpermissive]
+  bmw64_init(cc, IV384);
+                      ^
+bmw.c:764:1: warning:   initializing argument 1 of ‘void bmw64_init(sph_bmw_big_context*, const sph_u64*)’ [-fpermissive]
+ bmw64_init(sph_bmw_big_context *sc, const sph_u64 *iv)
+ ^
+bmw.c: In function ‘void sph_bmw384(void*, const void*, size_t)’:
+bmw.c:914:21: warning: invalid conversion from ‘void*’ to ‘sph_bmw_big_context*’ [-fpermissive]
+  bmw64(cc, data, len);
+                     ^
+bmw.c:772:1: warning:   initializing argument 1 of ‘void bmw64(sph_bmw_big_context*, const void*, size_t)’ [-fpermissive]
+ bmw64(sph_bmw_big_context *sc, const void *data, size_t len)
+ ^
+bmw.c: In function ‘void sph_bmw384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+bmw.c:928:31: warning: invalid conversion from ‘void*’ to ‘sph_bmw_big_context*’ [-fpermissive]
+  bmw64_close(cc, ub, n, dst, 6);
+                               ^
+bmw.c:810:1: warning:   initializing argument 1 of ‘void bmw64_close(sph_bmw_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ bmw64_close(sph_bmw_big_context *sc, unsigned ub, unsigned n,
+ ^
+bmw.c: In function ‘void sph_bmw512_init(void*)’:
+bmw.c:936:22: warning: invalid conversion from ‘void*’ to ‘sph_bmw_big_context*’ [-fpermissive]
+  bmw64_init(cc, IV512);
+                      ^
+bmw.c:764:1: warning:   initializing argument 1 of ‘void bmw64_init(sph_bmw_big_context*, const sph_u64*)’ [-fpermissive]
+ bmw64_init(sph_bmw_big_context *sc, const sph_u64 *iv)
+ ^
+bmw.c: In function ‘void sph_bmw512(void*, const void*, size_t)’:
+bmw.c:943:21: warning: invalid conversion from ‘void*’ to ‘sph_bmw_big_context*’ [-fpermissive]
+  bmw64(cc, data, len);
+                     ^
+bmw.c:772:1: warning:   initializing argument 1 of ‘void bmw64(sph_bmw_big_context*, const void*, size_t)’ [-fpermissive]
+ bmw64(sph_bmw_big_context *sc, const void *data, size_t len)
+ ^
+bmw.c: In function ‘void sph_bmw512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+bmw.c:957:31: warning: invalid conversion from ‘void*’ to ‘sph_bmw_big_context*’ [-fpermissive]
+  bmw64_close(cc, ub, n, dst, 8);
+                               ^
+bmw.c:810:1: warning:   initializing argument 1 of ‘void bmw64_close(sph_bmw_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ bmw64_close(sph_bmw_big_context *sc, unsigned ub, unsigned n,
+ ^
+rm -f obj/bmw.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/skein.d -o obj/skein.o skein.c
+skein.c: In function ‘void sph_skein224_init(void*)’:
+skein.c:1137:26: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_init(cc, IV224);
+                          ^
+skein.c:768:1: warning:   initializing argument 1 of ‘void skein_big_init(sph_skein_big_context*, const sph_u64*)’ [-fpermissive]
+ skein_big_init(sph_skein_big_context *sc, const sph_u64 *iv)
+ ^
+skein.c: In function ‘void sph_skein224(void*, const void*, size_t)’:
+skein.c:1144:30: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_core(cc, data, len);
+                              ^
+skein.c:859:1: warning:   initializing argument 1 of ‘void skein_big_core(sph_skein_big_context*, const void*, size_t)’ [-fpermissive]
+ skein_big_core(sph_skein_big_context *sc, const void *data, size_t len)
+ ^
+skein.c: In function ‘void sph_skein224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+skein.c:1158:36: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_close(cc, ub, n, dst, 28);
+                                    ^
+skein.c:953:1: warning:   initializing argument 1 of ‘void skein_big_close(sph_skein_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ skein_big_close(sph_skein_big_context *sc, unsigned ub, unsigned n,
+ ^
+skein.c: In function ‘void sph_skein256_init(void*)’:
+skein.c:1166:26: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_init(cc, IV256);
+                          ^
+skein.c:768:1: warning:   initializing argument 1 of ‘void skein_big_init(sph_skein_big_context*, const sph_u64*)’ [-fpermissive]
+ skein_big_init(sph_skein_big_context *sc, const sph_u64 *iv)
+ ^
+skein.c: In function ‘void sph_skein256(void*, const void*, size_t)’:
+skein.c:1173:30: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_core(cc, data, len);
+                              ^
+skein.c:859:1: warning:   initializing argument 1 of ‘void skein_big_core(sph_skein_big_context*, const void*, size_t)’ [-fpermissive]
+ skein_big_core(sph_skein_big_context *sc, const void *data, size_t len)
+ ^
+skein.c: In function ‘void sph_skein256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+skein.c:1187:36: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_close(cc, ub, n, dst, 32);
+                                    ^
+skein.c:953:1: warning:   initializing argument 1 of ‘void skein_big_close(sph_skein_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ skein_big_close(sph_skein_big_context *sc, unsigned ub, unsigned n,
+ ^
+skein.c: In function ‘void sph_skein384_init(void*)’:
+skein.c:1195:26: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_init(cc, IV384);
+                          ^
+skein.c:768:1: warning:   initializing argument 1 of ‘void skein_big_init(sph_skein_big_context*, const sph_u64*)’ [-fpermissive]
+ skein_big_init(sph_skein_big_context *sc, const sph_u64 *iv)
+ ^
+skein.c: In function ‘void sph_skein384(void*, const void*, size_t)’:
+skein.c:1202:30: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_core(cc, data, len);
+                              ^
+skein.c:859:1: warning:   initializing argument 1 of ‘void skein_big_core(sph_skein_big_context*, const void*, size_t)’ [-fpermissive]
+ skein_big_core(sph_skein_big_context *sc, const void *data, size_t len)
+ ^
+skein.c: In function ‘void sph_skein384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+skein.c:1216:36: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_close(cc, ub, n, dst, 48);
+                                    ^
+skein.c:953:1: warning:   initializing argument 1 of ‘void skein_big_close(sph_skein_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ skein_big_close(sph_skein_big_context *sc, unsigned ub, unsigned n,
+ ^
+skein.c: In function ‘void sph_skein512_init(void*)’:
+skein.c:1224:26: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_init(cc, IV512);
+                          ^
+skein.c:768:1: warning:   initializing argument 1 of ‘void skein_big_init(sph_skein_big_context*, const sph_u64*)’ [-fpermissive]
+ skein_big_init(sph_skein_big_context *sc, const sph_u64 *iv)
+ ^
+skein.c: In function ‘void sph_skein512(void*, const void*, size_t)’:
+skein.c:1231:30: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_core(cc, data, len);
+                              ^
+skein.c:859:1: warning:   initializing argument 1 of ‘void skein_big_core(sph_skein_big_context*, const void*, size_t)’ [-fpermissive]
+ skein_big_core(sph_skein_big_context *sc, const void *data, size_t len)
+ ^
+skein.c: In function ‘void sph_skein512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+skein.c:1245:36: warning: invalid conversion from ‘void*’ to ‘sph_skein_big_context*’ [-fpermissive]
+  skein_big_close(cc, ub, n, dst, 64);
+                                    ^
+skein.c:953:1: warning:   initializing argument 1 of ‘void skein_big_close(sph_skein_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ skein_big_close(sph_skein_big_context *sc, unsigned ub, unsigned n,
+ ^
+rm -f obj/skein.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/keccak.d -o obj/keccak.o keccak.c
+keccak.c: In function ‘void sph_keccak224_init(void*)’:
+keccak.c:1713:21: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_init(cc, 224);
+                     ^
+keccak.c:1526:1: warning:   initializing argument 1 of ‘void keccak_init(sph_keccak_context*, unsigned int)’ [-fpermissive]
+ keccak_init(sph_keccak_context *kc, unsigned out_size)
+ ^
+keccak.c: In function ‘void sph_keccak224(void*, const void*, size_t)’:
+keccak.c:1720:32: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_core(cc, data, len, 144);
+                                ^
+keccak.c:1569:1: warning:   initializing argument 1 of ‘void keccak_core(sph_keccak_context*, const void*, size_t, size_t)’ [-fpermissive]
+ keccak_core(sph_keccak_context *kc, const void *data, size_t len, size_t lim)
+ ^
+keccak.c: In function ‘void sph_keccak224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+keccak.c:1734:31: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_close28(cc, ub, n, dst);
+                               ^
+keccak.c:1608:14: warning:   initializing argument 1 of ‘void keccak_close28(sph_keccak_context*, unsigned int, unsigned int, void*)’ [-fpermissive]
+  static void keccak_close ## d( \
+              ^
+keccak.c:1704:1: note: in expansion of macro ‘DEFCLOSE’
+ DEFCLOSE(28, 144)
+ ^
+keccak.c: In function ‘void sph_keccak256_init(void*)’:
+keccak.c:1741:21: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_init(cc, 256);
+                     ^
+keccak.c:1526:1: warning:   initializing argument 1 of ‘void keccak_init(sph_keccak_context*, unsigned int)’ [-fpermissive]
+ keccak_init(sph_keccak_context *kc, unsigned out_size)
+ ^
+keccak.c: In function ‘void sph_keccak256(void*, const void*, size_t)’:
+keccak.c:1748:32: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_core(cc, data, len, 136);
+                                ^
+keccak.c:1569:1: warning:   initializing argument 1 of ‘void keccak_core(sph_keccak_context*, const void*, size_t, size_t)’ [-fpermissive]
+ keccak_core(sph_keccak_context *kc, const void *data, size_t len, size_t lim)
+ ^
+keccak.c: In function ‘void sph_keccak256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+keccak.c:1762:31: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_close32(cc, ub, n, dst);
+                               ^
+keccak.c:1608:14: warning:   initializing argument 1 of ‘void keccak_close32(sph_keccak_context*, unsigned int, unsigned int, void*)’ [-fpermissive]
+  static void keccak_close ## d( \
+              ^
+keccak.c:1705:1: note: in expansion of macro ‘DEFCLOSE’
+ DEFCLOSE(32, 136)
+ ^
+keccak.c: In function ‘void sph_keccak384_init(void*)’:
+keccak.c:1769:21: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_init(cc, 384);
+                     ^
+keccak.c:1526:1: warning:   initializing argument 1 of ‘void keccak_init(sph_keccak_context*, unsigned int)’ [-fpermissive]
+ keccak_init(sph_keccak_context *kc, unsigned out_size)
+ ^
+keccak.c: In function ‘void sph_keccak384(void*, const void*, size_t)’:
+keccak.c:1776:32: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_core(cc, data, len, 104);
+                                ^
+keccak.c:1569:1: warning:   initializing argument 1 of ‘void keccak_core(sph_keccak_context*, const void*, size_t, size_t)’ [-fpermissive]
+ keccak_core(sph_keccak_context *kc, const void *data, size_t len, size_t lim)
+ ^
+keccak.c: In function ‘void sph_keccak384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+keccak.c:1790:31: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_close48(cc, ub, n, dst);
+                               ^
+keccak.c:1608:14: warning:   initializing argument 1 of ‘void keccak_close48(sph_keccak_context*, unsigned int, unsigned int, void*)’ [-fpermissive]
+  static void keccak_close ## d( \
+              ^
+keccak.c:1706:1: note: in expansion of macro ‘DEFCLOSE’
+ DEFCLOSE(48, 104)
+ ^
+keccak.c: In function ‘void sph_keccak512_init(void*)’:
+keccak.c:1797:21: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_init(cc, 512);
+                     ^
+keccak.c:1526:1: warning:   initializing argument 1 of ‘void keccak_init(sph_keccak_context*, unsigned int)’ [-fpermissive]
+ keccak_init(sph_keccak_context *kc, unsigned out_size)
+ ^
+keccak.c: In function ‘void sph_keccak512(void*, const void*, size_t)’:
+keccak.c:1804:31: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_core(cc, data, len, 72);
+                               ^
+keccak.c:1569:1: warning:   initializing argument 1 of ‘void keccak_core(sph_keccak_context*, const void*, size_t, size_t)’ [-fpermissive]
+ keccak_core(sph_keccak_context *kc, const void *data, size_t len, size_t lim)
+ ^
+keccak.c: In function ‘void sph_keccak512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+keccak.c:1818:31: warning: invalid conversion from ‘void*’ to ‘sph_keccak_context*’ [-fpermissive]
+  keccak_close64(cc, ub, n, dst);
+                               ^
+keccak.c:1608:14: warning:   initializing argument 1 of ‘void keccak_close64(sph_keccak_context*, unsigned int, unsigned int, void*)’ [-fpermissive]
+  static void keccak_close ## d( \
+              ^
+keccak.c:1707:1: note: in expansion of macro ‘DEFCLOSE’
+ DEFCLOSE(64, 72)
+ ^
+rm -f obj/keccak.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/shavite.d -o obj/shavite.o shavite.c
+shavite.c: In function ‘void sph_shavite224_init(void*)’:
+shavite.c:1646:30: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_init(cc, IV224);
+                              ^
+shavite.c:1479:1: warning:   initializing argument 1 of ‘void shavite_small_init(sph_shavite_small_context*, const sph_u32*)’ [-fpermissive]
+ shavite_small_init(sph_shavite_small_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite224(void*, const void*, size_t)’:
+shavite.c:1653:34: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_core(cc, data, len);
+                                  ^
+shavite.c:1488:1: warning:   initializing argument 1 of ‘void shavite_small_core(sph_shavite_small_context*, const void*, size_t)’ [-fpermissive]
+ shavite_small_core(sph_shavite_small_context *sc, const void *data, size_t len)
+ ^
+shavite.c: In function ‘void sph_shavite224_close(void*, void*)’:
+shavite.c:1660:38: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_close(cc, 0, 0, dst, 7);
+                                      ^
+shavite.c:1516:1: warning:   initializing argument 1 of ‘void shavite_small_close(sph_shavite_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_small_close(sph_shavite_small_context *sc,
+ ^
+shavite.c:1661:30: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_init(cc, IV224);
+                              ^
+shavite.c:1479:1: warning:   initializing argument 1 of ‘void shavite_small_init(sph_shavite_small_context*, const sph_u32*)’ [-fpermissive]
+ shavite_small_init(sph_shavite_small_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+shavite.c:1668:39: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_close(cc, ub, n, dst, 7);
+                                       ^
+shavite.c:1516:1: warning:   initializing argument 1 of ‘void shavite_small_close(sph_shavite_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_small_close(sph_shavite_small_context *sc,
+ ^
+shavite.c:1669:30: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_init(cc, IV224);
+                              ^
+shavite.c:1479:1: warning:   initializing argument 1 of ‘void shavite_small_init(sph_shavite_small_context*, const sph_u32*)’ [-fpermissive]
+ shavite_small_init(sph_shavite_small_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite256_init(void*)’:
+shavite.c:1676:30: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_init(cc, IV256);
+                              ^
+shavite.c:1479:1: warning:   initializing argument 1 of ‘void shavite_small_init(sph_shavite_small_context*, const sph_u32*)’ [-fpermissive]
+ shavite_small_init(sph_shavite_small_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite256(void*, const void*, size_t)’:
+shavite.c:1683:34: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_core(cc, data, len);
+                                  ^
+shavite.c:1488:1: warning:   initializing argument 1 of ‘void shavite_small_core(sph_shavite_small_context*, const void*, size_t)’ [-fpermissive]
+ shavite_small_core(sph_shavite_small_context *sc, const void *data, size_t len)
+ ^
+shavite.c: In function ‘void sph_shavite256_close(void*, void*)’:
+shavite.c:1690:38: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_close(cc, 0, 0, dst, 8);
+                                      ^
+shavite.c:1516:1: warning:   initializing argument 1 of ‘void shavite_small_close(sph_shavite_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_small_close(sph_shavite_small_context *sc,
+ ^
+shavite.c:1691:30: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_init(cc, IV256);
+                              ^
+shavite.c:1479:1: warning:   initializing argument 1 of ‘void shavite_small_init(sph_shavite_small_context*, const sph_u32*)’ [-fpermissive]
+ shavite_small_init(sph_shavite_small_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+shavite.c:1698:39: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_close(cc, ub, n, dst, 8);
+                                       ^
+shavite.c:1516:1: warning:   initializing argument 1 of ‘void shavite_small_close(sph_shavite_small_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_small_close(sph_shavite_small_context *sc,
+ ^
+shavite.c:1699:30: warning: invalid conversion from ‘void*’ to ‘sph_shavite_small_context*’ [-fpermissive]
+  shavite_small_init(cc, IV256);
+                              ^
+shavite.c:1479:1: warning:   initializing argument 1 of ‘void shavite_small_init(sph_shavite_small_context*, const sph_u32*)’ [-fpermissive]
+ shavite_small_init(sph_shavite_small_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite384_init(void*)’:
+shavite.c:1706:28: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_init(cc, IV384);
+                            ^
+shavite.c:1554:1: warning:   initializing argument 1 of ‘void shavite_big_init(sph_shavite_big_context*, const sph_u32*)’ [-fpermissive]
+ shavite_big_init(sph_shavite_big_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite384(void*, const void*, size_t)’:
+shavite.c:1713:32: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_core(cc, data, len);
+                                ^
+shavite.c:1565:1: warning:   initializing argument 1 of ‘void shavite_big_core(sph_shavite_big_context*, const void*, size_t)’ [-fpermissive]
+ shavite_big_core(sph_shavite_big_context *sc, const void *data, size_t len)
+ ^
+shavite.c: In function ‘void sph_shavite384_close(void*, void*)’:
+shavite.c:1720:37: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_close(cc, 0, 0, dst, 12);
+                                     ^
+shavite.c:1601:1: warning:   initializing argument 1 of ‘void shavite_big_close(sph_shavite_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_big_close(sph_shavite_big_context *sc,
+ ^
+shavite.c:1721:28: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_init(cc, IV384);
+                            ^
+shavite.c:1554:1: warning:   initializing argument 1 of ‘void shavite_big_init(sph_shavite_big_context*, const sph_u32*)’ [-fpermissive]
+ shavite_big_init(sph_shavite_big_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+shavite.c:1728:38: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_close(cc, ub, n, dst, 12);
+                                      ^
+shavite.c:1601:1: warning:   initializing argument 1 of ‘void shavite_big_close(sph_shavite_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_big_close(sph_shavite_big_context *sc,
+ ^
+shavite.c:1729:28: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_init(cc, IV384);
+                            ^
+shavite.c:1554:1: warning:   initializing argument 1 of ‘void shavite_big_init(sph_shavite_big_context*, const sph_u32*)’ [-fpermissive]
+ shavite_big_init(sph_shavite_big_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite512_init(void*)’:
+shavite.c:1736:28: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_init(cc, IV512);
+                            ^
+shavite.c:1554:1: warning:   initializing argument 1 of ‘void shavite_big_init(sph_shavite_big_context*, const sph_u32*)’ [-fpermissive]
+ shavite_big_init(sph_shavite_big_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite512(void*, const void*, size_t)’:
+shavite.c:1743:32: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_core(cc, data, len);
+                                ^
+shavite.c:1565:1: warning:   initializing argument 1 of ‘void shavite_big_core(sph_shavite_big_context*, const void*, size_t)’ [-fpermissive]
+ shavite_big_core(sph_shavite_big_context *sc, const void *data, size_t len)
+ ^
+shavite.c: In function ‘void sph_shavite512_close(void*, void*)’:
+shavite.c:1750:37: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_close(cc, 0, 0, dst, 16);
+                                     ^
+shavite.c:1601:1: warning:   initializing argument 1 of ‘void shavite_big_close(sph_shavite_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_big_close(sph_shavite_big_context *sc,
+ ^
+shavite.c:1751:28: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_init(cc, IV512);
+                            ^
+shavite.c:1554:1: warning:   initializing argument 1 of ‘void shavite_big_init(sph_shavite_big_context*, const sph_u32*)’ [-fpermissive]
+ shavite_big_init(sph_shavite_big_context *sc, const sph_u32 *iv)
+ ^
+shavite.c: In function ‘void sph_shavite512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+shavite.c:1758:38: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_close(cc, ub, n, dst, 16);
+                                      ^
+shavite.c:1601:1: warning:   initializing argument 1 of ‘void shavite_big_close(sph_shavite_big_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ shavite_big_close(sph_shavite_big_context *sc,
+ ^
+shavite.c:1759:28: warning: invalid conversion from ‘void*’ to ‘sph_shavite_big_context*’ [-fpermissive]
+  shavite_big_init(cc, IV512);
+                            ^
+shavite.c:1554:1: warning:   initializing argument 1 of ‘void shavite_big_init(sph_shavite_big_context*, const sph_u32*)’ [-fpermissive]
+ shavite_big_init(sph_shavite_big_context *sc, const sph_u32 *iv)
+ ^
+rm -f obj/shavite.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/jh.d -o obj/jh.o jh.c
+jh.c: In function ‘void sph_jh224_init(void*)’:
+jh.c:1006:19: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_init(cc, IV224);
+                   ^
+jh.c:892:1: warning:   initializing argument 1 of ‘void jh_init(sph_jh_context*, const void*)’ [-fpermissive]
+ jh_init(sph_jh_context *sc, const void *iv)
+ ^
+jh.c: In function ‘void sph_jh224(void*, const void*, size_t)’:
+jh.c:1013:23: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_core(cc, data, len);
+                       ^
+jh.c:909:1: warning:   initializing argument 1 of ‘void jh_core(sph_jh_context*, const void*, size_t)’ [-fpermissive]
+ jh_core(sph_jh_context *sc, const void *data, size_t len)
+ ^
+jh.c: In function ‘void sph_jh224_close(void*, void*)’:
+jh.c:1020:34: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, 0, 0, dst, 7, IV224);
+                                  ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+jh.c:1027:35: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, ub, n, dst, 7, IV224);
+                                   ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh256_init(void*)’:
+jh.c:1034:19: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_init(cc, IV256);
+                   ^
+jh.c:892:1: warning:   initializing argument 1 of ‘void jh_init(sph_jh_context*, const void*)’ [-fpermissive]
+ jh_init(sph_jh_context *sc, const void *iv)
+ ^
+jh.c: In function ‘void sph_jh256(void*, const void*, size_t)’:
+jh.c:1041:23: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_core(cc, data, len);
+                       ^
+jh.c:909:1: warning:   initializing argument 1 of ‘void jh_core(sph_jh_context*, const void*, size_t)’ [-fpermissive]
+ jh_core(sph_jh_context *sc, const void *data, size_t len)
+ ^
+jh.c: In function ‘void sph_jh256_close(void*, void*)’:
+jh.c:1048:34: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, 0, 0, dst, 8, IV256);
+                                  ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+jh.c:1055:35: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, ub, n, dst, 8, IV256);
+                                   ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh384_init(void*)’:
+jh.c:1062:19: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_init(cc, IV384);
+                   ^
+jh.c:892:1: warning:   initializing argument 1 of ‘void jh_init(sph_jh_context*, const void*)’ [-fpermissive]
+ jh_init(sph_jh_context *sc, const void *iv)
+ ^
+jh.c: In function ‘void sph_jh384(void*, const void*, size_t)’:
+jh.c:1069:23: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_core(cc, data, len);
+                       ^
+jh.c:909:1: warning:   initializing argument 1 of ‘void jh_core(sph_jh_context*, const void*, size_t)’ [-fpermissive]
+ jh_core(sph_jh_context *sc, const void *data, size_t len)
+ ^
+jh.c: In function ‘void sph_jh384_close(void*, void*)’:
+jh.c:1076:35: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, 0, 0, dst, 12, IV384);
+                                   ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+jh.c:1083:36: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, ub, n, dst, 12, IV384);
+                                    ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh512_init(void*)’:
+jh.c:1090:19: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_init(cc, IV512);
+                   ^
+jh.c:892:1: warning:   initializing argument 1 of ‘void jh_init(sph_jh_context*, const void*)’ [-fpermissive]
+ jh_init(sph_jh_context *sc, const void *iv)
+ ^
+jh.c: In function ‘void sph_jh512(void*, const void*, size_t)’:
+jh.c:1097:23: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_core(cc, data, len);
+                       ^
+jh.c:909:1: warning:   initializing argument 1 of ‘void jh_core(sph_jh_context*, const void*, size_t)’ [-fpermissive]
+ jh_core(sph_jh_context *sc, const void *data, size_t len)
+ ^
+jh.c: In function ‘void sph_jh512_close(void*, void*)’:
+jh.c:1104:35: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, 0, 0, dst, 16, IV512);
+                                   ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+jh.c: In function ‘void sph_jh512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+jh.c:1111:36: warning: invalid conversion from ‘void*’ to ‘sph_jh_context*’ [-fpermissive]
+  jh_close(cc, ub, n, dst, 16, IV512);
+                                    ^
+jh.c:954:1: warning:   initializing argument 1 of ‘void jh_close(sph_jh_context*, unsigned int, unsigned int, void*, size_t, const void*)’ [-fpermissive]
+ jh_close(sph_jh_context *sc, unsigned ub, unsigned n,
+ ^
+rm -f obj/jh.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/luffa.d -o obj/luffa.o luffa.c
+luffa.c: In function ‘void luffa3_close(sph_luffa224_context*, unsigned int, unsigned int, void*, unsigned int)’:
+luffa.c:1116:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+luffa.c: In function ‘void luffa4_close(sph_luffa384_context*, unsigned int, unsigned int, void*)’:
+luffa.c:1176:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+luffa.c: In function ‘void luffa5_close(sph_luffa512_context*, unsigned int, unsigned int, void*)’:
+luffa.c:1256:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+luffa.c: In function ‘void sph_luffa224_init(void*)’:
+luffa.c:1298:5: warning: invalid conversion from ‘void*’ to ‘sph_luffa224_context*’ [-fpermissive]
+  sc = cc;
+     ^
+luffa.c: In function ‘void sph_luffa224(void*, const void*, size_t)’:
+luffa.c:1307:22: warning: invalid conversion from ‘void*’ to ‘sph_luffa224_context*’ [-fpermissive]
+  luffa3(cc, data, len);
+                      ^
+luffa.c:1059:1: warning:   initializing argument 1 of ‘void luffa3(sph_luffa224_context*, const void*, size_t)’ [-fpermissive]
+ luffa3(sph_luffa224_context *sc, const void *data, size_t len)
+ ^
+luffa.c: In function ‘void sph_luffa224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+luffa.c:1321:32: warning: invalid conversion from ‘void*’ to ‘sph_luffa224_context*’ [-fpermissive]
+  luffa3_close(cc, ub, n, dst, 7);
+                                ^
+luffa.c:1096:1: warning:   initializing argument 1 of ‘void luffa3_close(sph_luffa224_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ luffa3_close(sph_luffa224_context *sc, unsigned ub, unsigned n,
+ ^
+luffa.c: In function ‘void sph_luffa256_init(void*)’:
+luffa.c:1331:5: warning: invalid conversion from ‘void*’ to ‘sph_luffa256_context* {aka sph_luffa224_context*}’ [-fpermissive]
+  sc = cc;
+     ^
+luffa.c: In function ‘void sph_luffa256(void*, const void*, size_t)’:
+luffa.c:1340:22: warning: invalid conversion from ‘void*’ to ‘sph_luffa224_context*’ [-fpermissive]
+  luffa3(cc, data, len);
+                      ^
+luffa.c:1059:1: warning:   initializing argument 1 of ‘void luffa3(sph_luffa224_context*, const void*, size_t)’ [-fpermissive]
+ luffa3(sph_luffa224_context *sc, const void *data, size_t len)
+ ^
+luffa.c: In function ‘void sph_luffa256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+luffa.c:1354:32: warning: invalid conversion from ‘void*’ to ‘sph_luffa224_context*’ [-fpermissive]
+  luffa3_close(cc, ub, n, dst, 8);
+                                ^
+luffa.c:1096:1: warning:   initializing argument 1 of ‘void luffa3_close(sph_luffa224_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ luffa3_close(sph_luffa224_context *sc, unsigned ub, unsigned n,
+ ^
+luffa.c: In function ‘void sph_luffa384_init(void*)’:
+luffa.c:1364:5: warning: invalid conversion from ‘void*’ to ‘sph_luffa384_context*’ [-fpermissive]
+  sc = cc;
+     ^
+luffa.c: In function ‘void sph_luffa384(void*, const void*, size_t)’:
+luffa.c:1373:22: warning: invalid conversion from ‘void*’ to ‘sph_luffa384_context*’ [-fpermissive]
+  luffa4(cc, data, len);
+                      ^
+luffa.c:1129:1: warning:   initializing argument 1 of ‘void luffa4(sph_luffa384_context*, const void*, size_t)’ [-fpermissive]
+ luffa4(sph_luffa384_context *sc, const void *data, size_t len)
+ ^
+luffa.c: In function ‘void sph_luffa384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+luffa.c:1387:29: warning: invalid conversion from ‘void*’ to ‘sph_luffa384_context*’ [-fpermissive]
+  luffa4_close(cc, ub, n, dst);
+                             ^
+luffa.c:1166:1: warning:   initializing argument 1 of ‘void luffa4_close(sph_luffa384_context*, unsigned int, unsigned int, void*)’ [-fpermissive]
+ luffa4_close(sph_luffa384_context *sc, unsigned ub, unsigned n, void *dst)
+ ^
+luffa.c: In function ‘void sph_luffa512_init(void*)’:
+luffa.c:1397:5: warning: invalid conversion from ‘void*’ to ‘sph_luffa512_context*’ [-fpermissive]
+  sc = cc;
+     ^
+luffa.c: In function ‘void sph_luffa512(void*, const void*, size_t)’:
+luffa.c:1406:22: warning: invalid conversion from ‘void*’ to ‘sph_luffa512_context*’ [-fpermissive]
+  luffa5(cc, data, len);
+                      ^
+luffa.c:1209:1: warning:   initializing argument 1 of ‘void luffa5(sph_luffa512_context*, const void*, size_t)’ [-fpermissive]
+ luffa5(sph_luffa512_context *sc, const void *data, size_t len)
+ ^
+luffa.c: In function ‘void sph_luffa512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+luffa.c:1420:29: warning: invalid conversion from ‘void*’ to ‘sph_luffa512_context*’ [-fpermissive]
+  luffa5_close(cc, ub, n, dst);
+                             ^
+luffa.c:1246:1: warning:   initializing argument 1 of ‘void luffa5_close(sph_luffa512_context*, unsigned int, unsigned int, void*)’ [-fpermissive]
+ luffa5_close(sph_luffa512_context *sc, unsigned ub, unsigned n, void *dst)
+ ^
+rm -f obj/luffa.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/cubehash.d -o obj/cubehash.o cubehash.c
+cubehash.c: In function ‘void cubehash_close(sph_cubehash_context*, unsigned int, unsigned int, void*, size_t)’:
+cubehash.c:601:6: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  out = dst;
+      ^
+cubehash.c: In function ‘void sph_cubehash224_init(void*)’:
+cubehash.c:610:25: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_init(cc, IV224);
+                         ^
+cubehash.c:535:1: warning:   initializing argument 1 of ‘void cubehash_init(sph_cubehash_context*, const sph_u32*)’ [-fpermissive]
+ cubehash_init(sph_cubehash_context *sc, const sph_u32 *iv)
+ ^
+cubehash.c: In function ‘void sph_cubehash224(void*, const void*, size_t)’:
+cubehash.c:617:29: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_core(cc, data, len);
+                             ^
+cubehash.c:542:1: warning:   initializing argument 1 of ‘void cubehash_core(sph_cubehash_context*, const void*, size_t)’ [-fpermissive]
+ cubehash_core(sph_cubehash_context *sc, const void *data, size_t len)
+ ^
+cubehash.c: In function ‘void sph_cubehash224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+cubehash.c:631:34: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_close(cc, ub, n, dst, 7);
+                                  ^
+cubehash.c:579:1: warning:   initializing argument 1 of ‘void cubehash_close(sph_cubehash_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ cubehash_close(sph_cubehash_context *sc, unsigned ub, unsigned n,
+ ^
+cubehash.c: In function ‘void sph_cubehash256_init(void*)’:
+cubehash.c:639:25: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_init(cc, IV256);
+                         ^
+cubehash.c:535:1: warning:   initializing argument 1 of ‘void cubehash_init(sph_cubehash_context*, const sph_u32*)’ [-fpermissive]
+ cubehash_init(sph_cubehash_context *sc, const sph_u32 *iv)
+ ^
+cubehash.c: In function ‘void sph_cubehash256(void*, const void*, size_t)’:
+cubehash.c:646:29: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_core(cc, data, len);
+                             ^
+cubehash.c:542:1: warning:   initializing argument 1 of ‘void cubehash_core(sph_cubehash_context*, const void*, size_t)’ [-fpermissive]
+ cubehash_core(sph_cubehash_context *sc, const void *data, size_t len)
+ ^
+cubehash.c: In function ‘void sph_cubehash256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+cubehash.c:660:34: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_close(cc, ub, n, dst, 8);
+                                  ^
+cubehash.c:579:1: warning:   initializing argument 1 of ‘void cubehash_close(sph_cubehash_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ cubehash_close(sph_cubehash_context *sc, unsigned ub, unsigned n,
+ ^
+cubehash.c: In function ‘void sph_cubehash384_init(void*)’:
+cubehash.c:668:25: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_init(cc, IV384);
+                         ^
+cubehash.c:535:1: warning:   initializing argument 1 of ‘void cubehash_init(sph_cubehash_context*, const sph_u32*)’ [-fpermissive]
+ cubehash_init(sph_cubehash_context *sc, const sph_u32 *iv)
+ ^
+cubehash.c: In function ‘void sph_cubehash384(void*, const void*, size_t)’:
+cubehash.c:675:29: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_core(cc, data, len);
+                             ^
+cubehash.c:542:1: warning:   initializing argument 1 of ‘void cubehash_core(sph_cubehash_context*, const void*, size_t)’ [-fpermissive]
+ cubehash_core(sph_cubehash_context *sc, const void *data, size_t len)
+ ^
+cubehash.c: In function ‘void sph_cubehash384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+cubehash.c:689:35: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_close(cc, ub, n, dst, 12);
+                                   ^
+cubehash.c:579:1: warning:   initializing argument 1 of ‘void cubehash_close(sph_cubehash_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ cubehash_close(sph_cubehash_context *sc, unsigned ub, unsigned n,
+ ^
+cubehash.c: In function ‘void sph_cubehash512_init(void*)’:
+cubehash.c:697:25: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_init(cc, IV512);
+                         ^
+cubehash.c:535:1: warning:   initializing argument 1 of ‘void cubehash_init(sph_cubehash_context*, const sph_u32*)’ [-fpermissive]
+ cubehash_init(sph_cubehash_context *sc, const sph_u32 *iv)
+ ^
+cubehash.c: In function ‘void sph_cubehash512(void*, const void*, size_t)’:
+cubehash.c:704:29: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_core(cc, data, len);
+                             ^
+cubehash.c:542:1: warning:   initializing argument 1 of ‘void cubehash_core(sph_cubehash_context*, const void*, size_t)’ [-fpermissive]
+ cubehash_core(sph_cubehash_context *sc, const void *data, size_t len)
+ ^
+cubehash.c: In function ‘void sph_cubehash512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+cubehash.c:718:35: warning: invalid conversion from ‘void*’ to ‘sph_cubehash_context*’ [-fpermissive]
+  cubehash_close(cc, ub, n, dst, 16);
+                                   ^
+cubehash.c:579:1: warning:   initializing argument 1 of ‘void cubehash_close(sph_cubehash_context*, unsigned int, unsigned int, void*, size_t)’ [-fpermissive]
+ cubehash_close(sph_cubehash_context *sc, unsigned ub, unsigned n,
+ ^
+rm -f obj/cubehash.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/echo.d -o obj/echo.o echo.c
+echo.c: In function ‘void sph_echo224_init(void*)’:
+echo.c:922:25: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_init(cc, 224);
+                         ^
+echo.c:647:1: warning:   initializing argument 1 of ‘void echo_small_init(sph_echo_small_context*, unsigned int)’ [-fpermissive]
+ echo_small_init(sph_echo_small_context *sc, unsigned out_len)
+ ^
+echo.c: In function ‘void sph_echo224(void*, const void*, size_t)’:
+echo.c:929:31: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_core(cc, data, len);
+                               ^
+echo.c:731:1: warning:   initializing argument 1 of ‘void echo_small_core(sph_echo_small_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_small_core(sph_echo_small_context *sc,
+ ^
+echo.c:929:31: warning: invalid conversion from ‘const void*’ to ‘const unsigned char*’ [-fpermissive]
+  echo_small_core(cc, data, len);
+                               ^
+echo.c:731:1: warning:   initializing argument 2 of ‘void echo_small_core(sph_echo_small_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_small_core(sph_echo_small_context *sc,
+ ^
+echo.c: In function ‘void sph_echo224_close(void*, void*)’:
+echo.c:936:35: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_close(cc, 0, 0, dst, 7);
+                                   ^
+echo.c:801:1: warning:   initializing argument 1 of ‘void echo_small_close(sph_echo_small_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_small_close(sph_echo_small_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo224_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+echo.c:943:36: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_close(cc, ub, n, dst, 7);
+                                    ^
+echo.c:801:1: warning:   initializing argument 1 of ‘void echo_small_close(sph_echo_small_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_small_close(sph_echo_small_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo256_init(void*)’:
+echo.c:950:25: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_init(cc, 256);
+                         ^
+echo.c:647:1: warning:   initializing argument 1 of ‘void echo_small_init(sph_echo_small_context*, unsigned int)’ [-fpermissive]
+ echo_small_init(sph_echo_small_context *sc, unsigned out_len)
+ ^
+echo.c: In function ‘void sph_echo256(void*, const void*, size_t)’:
+echo.c:957:31: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_core(cc, data, len);
+                               ^
+echo.c:731:1: warning:   initializing argument 1 of ‘void echo_small_core(sph_echo_small_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_small_core(sph_echo_small_context *sc,
+ ^
+echo.c:957:31: warning: invalid conversion from ‘const void*’ to ‘const unsigned char*’ [-fpermissive]
+  echo_small_core(cc, data, len);
+                               ^
+echo.c:731:1: warning:   initializing argument 2 of ‘void echo_small_core(sph_echo_small_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_small_core(sph_echo_small_context *sc,
+ ^
+echo.c: In function ‘void sph_echo256_close(void*, void*)’:
+echo.c:964:35: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_close(cc, 0, 0, dst, 8);
+                                   ^
+echo.c:801:1: warning:   initializing argument 1 of ‘void echo_small_close(sph_echo_small_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_small_close(sph_echo_small_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo256_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+echo.c:971:36: warning: invalid conversion from ‘void*’ to ‘sph_echo_small_context*’ [-fpermissive]
+  echo_small_close(cc, ub, n, dst, 8);
+                                    ^
+echo.c:801:1: warning:   initializing argument 1 of ‘void echo_small_close(sph_echo_small_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_small_close(sph_echo_small_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo384_init(void*)’:
+echo.c:978:23: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_init(cc, 384);
+                       ^
+echo.c:673:1: warning:   initializing argument 1 of ‘void echo_big_init(sph_echo_big_context*, unsigned int)’ [-fpermissive]
+ echo_big_init(sph_echo_big_context *sc, unsigned out_len)
+ ^
+echo.c: In function ‘void sph_echo384(void*, const void*, size_t)’:
+echo.c:985:29: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_core(cc, data, len);
+                             ^
+echo.c:766:1: warning:   initializing argument 1 of ‘void echo_big_core(sph_echo_big_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_big_core(sph_echo_big_context *sc,
+ ^
+echo.c:985:29: warning: invalid conversion from ‘const void*’ to ‘const unsigned char*’ [-fpermissive]
+  echo_big_core(cc, data, len);
+                             ^
+echo.c:766:1: warning:   initializing argument 2 of ‘void echo_big_core(sph_echo_big_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_big_core(sph_echo_big_context *sc,
+ ^
+echo.c: In function ‘void sph_echo384_close(void*, void*)’:
+echo.c:992:34: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_close(cc, 0, 0, dst, 12);
+                                  ^
+echo.c:860:1: warning:   initializing argument 1 of ‘void echo_big_close(sph_echo_big_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_big_close(sph_echo_big_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo384_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+echo.c:999:35: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_close(cc, ub, n, dst, 12);
+                                   ^
+echo.c:860:1: warning:   initializing argument 1 of ‘void echo_big_close(sph_echo_big_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_big_close(sph_echo_big_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo512_init(void*)’:
+echo.c:1006:23: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_init(cc, 512);
+                       ^
+echo.c:673:1: warning:   initializing argument 1 of ‘void echo_big_init(sph_echo_big_context*, unsigned int)’ [-fpermissive]
+ echo_big_init(sph_echo_big_context *sc, unsigned out_len)
+ ^
+echo.c: In function ‘void sph_echo512(void*, const void*, size_t)’:
+echo.c:1013:29: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_core(cc, data, len);
+                             ^
+echo.c:766:1: warning:   initializing argument 1 of ‘void echo_big_core(sph_echo_big_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_big_core(sph_echo_big_context *sc,
+ ^
+echo.c:1013:29: warning: invalid conversion from ‘const void*’ to ‘const unsigned char*’ [-fpermissive]
+  echo_big_core(cc, data, len);
+                             ^
+echo.c:766:1: warning:   initializing argument 2 of ‘void echo_big_core(sph_echo_big_context*, const unsigned char*, size_t)’ [-fpermissive]
+ echo_big_core(sph_echo_big_context *sc,
+ ^
+echo.c: In function ‘void sph_echo512_close(void*, void*)’:
+echo.c:1020:34: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_close(cc, 0, 0, dst, 16);
+                                  ^
+echo.c:860:1: warning:   initializing argument 1 of ‘void echo_big_close(sph_echo_big_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_big_close(sph_echo_big_context *sc, unsigned ub, unsigned n,
+ ^
+echo.c: In function ‘void sph_echo512_addbits_and_close(void*, unsigned int, unsigned int, void*)’:
+echo.c:1027:35: warning: invalid conversion from ‘void*’ to ‘sph_echo_big_context*’ [-fpermissive]
+  echo_big_close(cc, ub, n, dst, 16);
+                                   ^
+echo.c:860:1: warning:   initializing argument 1 of ‘void echo_big_close(sph_echo_big_context*, unsigned int, unsigned int, void*, unsigned int)’ [-fpermissive]
+ echo_big_close(sph_echo_big_context *sc, unsigned ub, unsigned n,
+ ^
+rm -f obj/echo.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -fpermissive -MMD -MF obj/simd.d -o obj/simd.o simd.c
+simd.c: In function ‘void init_small(void*, const u32*)’:
+simd.c:1565:5: warning: invalid conversion from ‘void*’ to ‘sph_simd_small_context*’ [-fpermissive]
+  sc = cc;
+     ^
+simd.c: In function ‘void init_big(void*, const u32*)’:
+simd.c:1576:5: warning: invalid conversion from ‘void*’ to ‘sph_simd_big_context*’ [-fpermissive]
+  sc = cc;
+     ^
+simd.c: In function ‘void update_small(void*, const void*, size_t)’:
+simd.c:1587:5: warning: invalid conversion from ‘void*’ to ‘sph_simd_small_context*’ [-fpermissive]
+  sc = cc;
+     ^
+simd.c: In function ‘void update_big(void*, const void*, size_t)’:
+simd.c:1612:5: warning: invalid conversion from ‘void*’ to ‘sph_simd_big_context*’ [-fpermissive]
+  sc = cc;
+     ^
+simd.c: In function ‘void finalize_small(void*, unsigned int, unsigned int, void*, size_t)’:
+simd.c:1661:5: warning: invalid conversion from ‘void*’ to ‘sph_simd_small_context*’ [-fpermissive]
+  sc = cc;
+     ^
+simd.c:1671:4: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  d = dst;
+    ^
+simd.c:1672:9: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  for (d = dst, u = 0; u < dst_len; u ++)
+         ^
+simd.c: In function ‘void finalize_big(void*, unsigned int, unsigned int, void*, size_t)’:
+simd.c:1683:5: warning: invalid conversion from ‘void*’ to ‘sph_simd_big_context*’ [-fpermissive]
+  sc = cc;
+     ^
+simd.c:1693:4: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  d = dst;
+    ^
+simd.c:1694:9: warning: invalid conversion from ‘void*’ to ‘unsigned char*’ [-fpermissive]
+  for (d = dst, u = 0; u < dst_len; u ++)
+         ^
+rm -f obj/simd.d
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/alert.d -o obj/alert.o alert.cpp
+/bin/sh ../share/genbuild.sh obj/build.h
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/version.d -o obj/version.o version.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/checkpoints.d -o obj/checkpoints.o checkpoints.cpp
+In file included from db.h:8:0,
+                 from txdb.h:16,
+                 from checkpoints.cpp:10:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/netbase.d -o obj/netbase.o netbase.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/addrman.d -o obj/addrman.o addrman.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/crypter.d -o obj/crypter.o crypter.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/base58.d -o obj/base58.o base58.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/key.d -o obj/key.o key.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/db.d -o obj/db.o db.cpp
+In file included from db.h:8:0,
+                 from db.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/init.d -o obj/init.o init.cpp
+In file included from db.h:8:0,
+                 from txdb.h:16,
+                 from init.cpp:5:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/irc.d -o obj/irc.o irc.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/keystore.d -o obj/keystore.o keystore.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/miner.d -o obj/miner.o miner.cpp
+In file included from db.h:8:0,
+                 from txdb.h:16,
+                 from miner.cpp:7:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/main.d -o obj/main.o main.cpp
+In file included from db.h:8:0,
+                 from main.cpp:8:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/net.d -o obj/net.o net.cpp
+In file included from db.h:8:0,
+                 from net.cpp:7:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/ntp.d -o obj/ntp.o ntp.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/stun.d -o obj/stun.o stun.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/protocol.d -o obj/protocol.o protocol.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/bitcoinrpc.d -o obj/bitcoinrpc.o bitcoinrpc.cpp
+In file included from wallet.h:13:0,
+                 from init.h:8,
+                 from bitcoinrpc.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/rpcdump.d -o obj/rpcdump.o rpcdump.cpp
+In file included from wallet.h:13:0,
+                 from init.h:8,
+                 from rpcdump.cpp:5:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/rpcnet.d -o obj/rpcnet.o rpcnet.cpp
+In file included from wallet.h:13:0,
+                 from rpcnet.cpp:7:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/rpcmining.d -o obj/rpcmining.o rpcmining.cpp
+In file included from rpcmining.cpp:6:0:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/rpcwallet.d -o obj/rpcwallet.o rpcwallet.cpp
+In file included from wallet.h:13:0,
+                 from rpcwallet.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/rpcblockchain.d -o obj/rpcblockchain.o rpcblockchain.cpp
+In file included from rpcblockchain.cpp:6:0:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/rpcrawtransaction.d -o obj/rpcrawtransaction.o rpcrawtransaction.cpp
+In file included from db.h:8:0,
+                 from txdb.h:16,
+                 from rpcrawtransaction.cpp:10:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/script.d -o obj/script.o script.cpp
+In file included from script.cpp:15:0:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/sync.d -o obj/sync.o sync.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/util.d -o obj/util.o util.cpp
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/wallet.d -o obj/wallet.o wallet.cpp
+In file included from db.h:8:0,
+                 from txdb.h:16,
+                 from wallet.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/walletdb.d -o obj/walletdb.o walletdb.cpp
+In file included from db.h:8:0,
+                 from walletdb.h:8,
+                 from walletdb.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/noui.d -o obj/noui.o noui.cpp
+In file included from wallet.h:13:0,
+                 from init.h:8,
+                 from noui.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/kernel.d -o obj/kernel.o kernel.cpp
+In file included from kernel.h:7:0,
+                 from kernel.cpp:10:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/kernel_worker.d -o obj/kernel_worker.o kernel_worker.cpp
+In file included from kernel.h:7:0,
+                 from kernel_worker.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -c -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -MMD -MF obj/txdb-bdb.d -o obj/txdb-bdb.o txdb-bdb.cpp
+In file included from db.h:8:0,
+                 from txdb-bdb.cpp:6:
+main.h: In member function ‘unsigned int CBlock::GetStakeEntropyBit(unsigned int) const’:
+main.h:962:24: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+         if (nHeight >= 0 || fTestNet)
+                        ^
+g++ -O2 -mssse3 -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wformat -Wformat-security -Wno-unused-parameter -g -DBOOST_SPIRIT_THREADSAFE -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/root/jane/src -I/root/jane/src/obj -DUSE_IPV6=1 -DHAVE_BUILD_INFO -fno-stack-protector -fstack-protector-all -Wstack-protector -D_FORTIFY_SOURCE=2  -o JaneCoind obj/groestl.o obj/blake.o obj/bmw.o obj/skein.o obj/keccak.o obj/shavite.o obj/jh.o obj/luffa.o obj/cubehash.o obj/echo.o obj/simd.o obj/alert.o obj/version.o obj/checkpoints.o obj/netbase.o obj/addrman.o obj/crypter.o obj/base58.o obj/key.o obj/db.o obj/init.o obj/irc.o obj/keystore.o obj/miner.o obj/main.o obj/net.o obj/ntp.o obj/stun.o obj/protocol.o obj/bitcoinrpc.o obj/rpcdump.o obj/rpcnet.o obj/rpcmining.o obj/rpcwallet.o obj/rpcblockchain.o obj/rpcrawtransaction.o obj/script.o obj/sync.o obj/util.o obj/wallet.o obj/walletdb.o obj/noui.o obj/kernel.o obj/kernel_worker.o obj/txdb-bdb.o crypto/scrypt/generic/obj/scrypt-generic.o -Wl,-z,relro -Wl,-z,now   -Wl,-Bdynamic -l boost_system -l boost_filesystem -l boost_program_options -l boost_thread -l db_cxx -l ssl -l crypto -Wl,-Bdynamic -l z -l dl -l pthread
+root@mongo:~/jane/src# ./JaneCoind
+
+
+
+RESULTS
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//        nothing, it just looks like it is about to start, but does not. Or, alternatively, //////////////
+     it looks like it is // mining a genesis block .... forever. After 20 minutes            ////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$ ^Croot@mongo:~/jane/src# 
+
+
+//////////////////////////////////////////////////////////////////////////////////
+                                                        /////////////////////////////////////
+Try a new approach                                   //////////////////////////////////////
+                                                             /////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+$ nano /root/.JaneCoin/
+
+$ ~/.JaneCoin# dir
+
+//////////////////////////////////////////////////////////////////////////////////
+                                                                         ////////////////////
+A JaneCoin directory has been created WITH A READY MADE JaneCoin.conf   ////////////////////
+                                                                        ///////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+Let me take a look.
+
+
+blk0001.dat  blkindex.dat  database  db.log  debug.log	JaneCoin.conf  peers.dat  wallet.dat
+
+$ ~/.JaneCoin/database dir
+log.0000000002
+
+$ ~/. nano Janecoin.conf
+
+////////////////////////////////////////////////////////////////
+                                          ////////////////////
+Contents of my READY MADE JaneCoin.conf   ////////////////////
+                                         ///////////////////
+////////////////////////////////////////////////////////////
+
+rpcuser=user
+rpcpassword=U3wU0Uk8pVhTEze
+rpcport=13412
+port=13413
+#(0=off, 1=on) daemon - run in the background as a daemon and accept commands
+daemon=0
+#(0=off, 1=on) server - accept command line and JSON-RPC commands
+server=0
+rpcallowip=127.0.0.1
+testnet=0
+
+
+
+//////////////////
+
+
+# it could be a qt-4 thing as it defaults to qt-5 when trying to build a wallet, forcing me to use "qmake -qt=qt4" after which it compiles (on my server). 
+
+
+//////////////////
+
+
+//////////////////////////////////////////
+So change the conf file for a normal one.//
+///////////////////////////////////////////
+
+
+//////////
+Start//
+/////////
+
+
+$ ./JaneCoind
+
+root@mongo:~/jane/src# JaneCoin server starting
+
+
+//////////
+RPC call//
+/////////
+
+root@mongo:~/jane/src# ./JaneCoind getinfo
+{
+    "version" : "JANE-v1.0.0.build-g-bdb-gcc",
+    "protocolversion" : 90000,
+    "walletversion" : 60000,
+    "balance" : 0.00000000,
+    "unspendable" : 0.00000000,
+    "newmint" : 0.00000000,
+    "stake" : 0.00000000,
+    "blocks" : 6960,
+    "timestamping" : {
+        "systemclock" : 1483379607,
+        "adjustedtime" : 1483379607,
+        "ntpoffset" : 0,
+        "p2poffset" : 0
+    },
+    "moneysupply" : 304259197.70762193,
+    "connections" : 5,
+    "proxy" : "",
+    "ip" : "xxx.xx.xx.xxx",
+    "difficulty" : {
+        "proof-of-work" : 31.33748254,
+        "proof-of-stake" : 8.71840176
+    },
+    "testnet" : false,
+    "keypoololdest" : 1483371283,
+    "keypoolsize" : 101,
+    "paytxfee" : 0.00001000,
+    "mininput" : 0.00001000,
+    "errors" : ""
+
+//////////
+RPC call//
+/////////
+
+$ ./JaneCoind getpeerinfo
+[
+    {
+        "addr" : "167.114.103.43:13413",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483381458,
+        "bytessent" : 1758,
+        "bytesrecv" : 5256,
+        "conntime" : 1483379587,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : false,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0,
+        "syncnode" : true
+    },
+    {
+        "addr" : "173.212.198.143:13413",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380876,
+        "bytessent" : 1593,
+        "bytesrecv" : 3998,
+        "conntime" : 1483379588,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : false,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "192.99.8.126:50125",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380877,
+        "bytessent" : 739,
+        "bytesrecv" : 2662,
+        "conntime" : 1483379588,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "74.66.86.127:49571",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380876,
+        "bytessent" : 659,
+        "bytesrecv" : 2772,
+        "conntime" : 1483379599,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "82.211.19.114:13413",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380876,
+        "bytessent" : 468,
+        "bytesrecv" : 1647,
+        "conntime" : 1483379605,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : false,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "107.170.156.17:53809",
+        "services" : "00000001",
+        "lastsend" : 1483380562,
+        "lastrecv" : 1483380876,
+        "bytessent" : 2305,
+        "bytesrecv" : 1242,
+        "conntime" : 1483379650,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "185.11.195.45:48811",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380876,
+        "bytessent" : 824,
+        "bytesrecv" : 2772,
+        "conntime" : 1483379658,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "176.84.221.30:57182",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380876,
+        "bytessent" : 739,
+        "bytesrecv" : 1943,
+        "conntime" : 1483379688,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "69.245.98.230:56406",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483379716,
+        "bytessent" : 659,
+        "bytesrecv" : 230,
+        "conntime" : 1483379715,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "89.109.238.59:61210",
+        "services" : "00000001",
+        "lastsend" : 1483381458,
+        "lastrecv" : 1483380876,
+        "bytessent" : 769,
+        "bytesrecv" : 1888,
+        "conntime" : 1483379722,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "94.175.27.83:54778",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380136,
+        "bytessent" : 659,
+        "bytesrecv" : 1888,
+        "conntime" : 1483379965,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    },
+    {
+        "addr" : "195.189.196.59:57337",
+        "services" : "00000001",
+        "lastsend" : 1483380876,
+        "lastrecv" : 1483380136,
+        "bytessent" : 598,
+        "bytesrecv" : 1059,
+        "conntime" : 1483380078,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6961,
+        "banscore" : 0
+    },
+    {
+        "addr" : "86.0.23.14:61238",
+        "services" : "00000001",
+        "lastsend" : 1483380877,
+        "lastrecv" : 1483381465,
+        "bytessent" : 858,
+        "bytesrecv" : 346,
+        "conntime" : 1483380558,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6962,
+        "banscore" : 0
+    },
+    {
+        "addr" : "109.190.129.149:33461",
+        "services" : "00000001",
+        "lastsend" : 1483381458,
+        "lastrecv" : 1483380876,
+        "bytessent" : 1421,
+        "bytesrecv" : 1120,
+        "conntime" : 1483380631,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6962,
+        "banscore" : 0
+    },
+    {
+        "addr" : "49.49.240.22:62790",
+        "services" : "00000001",
+        "lastsend" : 1483380952,
+        "lastrecv" : 1483380952,
+        "bytessent" : 1305,
+        "bytesrecv" : 363,
+        "conntime" : 1483380950,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6960,
+        "banscore" : 0
+    }
+
+
+
+//////////
+RPC call//
+/////////
+
+
+
+$ ./JaneCoind getwork
+{
+    "midstate" : "bf6080ea97a731825841d33faaf5848584bfc985b8694ded89a05df7cbbe2b2a",
+    "data" : "00000006ede8329c7fd005c2dff4d8d1e871113e544d8180f9c7a3b706f73a4d0000000030c299e6ff3615e471b2b54b024d801c801ecad09b05733a6eacb088caf09695586a95101c072af000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000080020000",
+    "hash1" : "00000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000010000",
+    "target" : "00000000000000000000000000000000000000000000000000f02a0700000000"
+}
+
+
+------
+
+
+
+Then I messed up, stopped the daemon and tried putting testnet=1 in the conf. 
+
+That made the genesis fail, and gave the testnet output folder.
+
+So I sftpd and got the whole of the /root/.Jane/ before deleting, and starting again just with my conf file in, and it started again.
+
+
+./JaneCoind getinfo
+{
+    "version" : "JANE-v1.0.0.build-g-bdb-gcc",
+    "protocolversion" : 90000,
+    "walletversion" : 60000,
+    "balance" : 0.00000000,
+    "unspendable" : 0.00000000,
+    "newmint" : 0.00000000,
+    "stake" : 0.00000000,
+    "blocks" : 7008,
+    "timestamping" : {
+        "systemclock" : 1483398738,
+        "adjustedtime" : 1483398738,
+        "ntpoffset" : 0,
+        "p2poffset" : 0
+    },
+    "moneysupply" : 304301564.60844380,
+    "connections" : 15,
+    "proxy" : "",
+    "ip" : "xxx.xx.xx.xxx",
+    "difficulty" : {
+        "proof-of-work" : 28.91990940,
+        "proof-of-stake" : 6.97472141
+    },
+    "testnet" : false,
+    "keypoololdest" : 1483383344,
+    "keypoolsize" : 101,
+    "paytxfee" : 0.00001000,
+    "mininput" : 0.00001000,
+    "errors" : ""
+
+
+./JaneCoind getpeerinfo
+[
+    {
+        "addr" : "167.114.103.43:44598",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398522,
+        "bytessent" : 4961,
+        "bytesrecv" : 25356,
+        "conntime" : 1483386339,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6975,
+        "banscore" : 0,
+        "syncnode" : true
+    },
+    {
+        "addr" : "195.189.196.59:58450",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398508,
+        "bytessent" : 8387,
+        "bytesrecv" : 18635,
+        "conntime" : 1483386340,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6976,
+        "banscore" : 0
+    },
+    {
+        "addr" : "82.211.19.114:13413",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398508,
+        "bytessent" : 5328,
+        "bytesrecv" : 19224,
+        "conntime" : 1483386344,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : false,
+        "releasetime" : 0,
+        "startingheight" : 6976,
+        "banscore" : 0
+    },
+    {
+        "addr" : "69.245.98.230:62578",
+        "services" : "00000001",
+        "lastsend" : 1483398748,
+        "lastrecv" : 1483398748,
+        "bytessent" : 4457,
+        "bytesrecv" : 8420,
+        "conntime" : 1483386344,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6976,
+        "banscore" : 0
+    },
+    {
+        "addr" : "173.212.198.143:57423",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398508,
+        "bytessent" : 11653,
+        "bytesrecv" : 24319,
+        "conntime" : 1483386352,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6976,
+        "banscore" : 0
+    },
+    {
+        "addr" : "107.170.156.17:13413",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398508,
+        "bytessent" : 18117,
+        "bytesrecv" : 11308,
+        "conntime" : 1483386361,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : false,
+        "releasetime" : 0,
+        "startingheight" : 6977,
+        "banscore" : 0
+    },
+    {
+        "addr" : "176.84.221.30:38198",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398508,
+        "bytessent" : 2639,
+        "bytesrecv" : 18208,
+        "conntime" : 1483386365,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6977,
+        "banscore" : 0
+    },
+    {
+        "addr" : "89.109.238.59:49681",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398161,
+        "bytessent" : 2793,
+        "bytesrecv" : 7225,
+        "conntime" : 1483386369,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6977,
+        "banscore" : 0
+    },
+    {
+        "addr" : "192.99.8.126:33372",
+        "services" : "00000001",
+        "lastsend" : 1483398748,
+        "lastrecv" : 1483398748,
+        "bytessent" : 2665,
+        "bytesrecv" : 14095,
+        "conntime" : 1483386410,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6977,
+        "banscore" : 0
+    },
+    {
+        "addr" : "74.66.86.127:50362",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398298,
+        "bytessent" : 5132,
+        "bytesrecv" : 9860,
+        "conntime" : 1483386420,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6977,
+        "banscore" : 0
+    },
+    {
+        "addr" : "109.190.129.149:34654",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398508,
+        "bytessent" : 10986,
+        "bytesrecv" : 22047,
+        "conntime" : 1483386970,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 6978,
+        "banscore" : 0
+    },
+    {
+        "addr" : "94.175.27.83:60848",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483397282,
+        "bytessent" : 1044,
+        "bytesrecv" : 1152,
+        "conntime" : 1483395220,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 7003,
+        "banscore" : 0
+    },
+    {
+        "addr" : "185.11.195.45:55521",
+        "services" : "00000001",
+        "lastsend" : 1483398508,
+        "lastrecv" : 1483398509,
+        "bytessent" : 569,
+        "bytesrecv" : 1059,
+        "conntime" : 1483396948,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 7005,
+        "banscore" : 0
+    },
+    {
+        "addr" : "49.49.240.22:50350",
+        "services" : "00000001",
+        "lastsend" : 1483398535,
+        "lastrecv" : 1483397320,
+        "bytessent" : 1453,
+        "bytesrecv" : 291,
+        "conntime" : 1483397317,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 7004,
+        "banscore" : 0
+    },
+    {
+        "addr" : "86.0.23.14:59683",
+        "services" : "00000001",
+        "lastsend" : 1483398536,
+        "lastrecv" : 1483398534,
+        "bytessent" : 356,
+        "bytesrecv" : 230,
+        "conntime" : 1483398534,
+        "version" : 90000,
+        "subver" : "/JaneCoin:1.0.0.1/",
+        "inbound" : true,
+        "releasetime" : 0,
+        "startingheight" : 7008,
+        "banscore" : 0
+
